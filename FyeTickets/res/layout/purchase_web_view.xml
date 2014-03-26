@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical" >
+    <LinearLayout
+ 	    android:id="@+id/relativeLayout1arist_all_event"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="70dp"
+ 	    android:background="@drawable/action_bar"
+ 	    android:orientation="horizontal" >
+
+     <LinearLayout android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:gravity="center_vertical"
+         android:orientation="horizontal"
+         android:paddingLeft="5dp"
+         android:id="@+id/web_purchase_page_back_linearlayout">
+         
+         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_button" />
+         
+         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/action_bar_logo" />
+         
+     </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:gravity="center_vertical"
+             android:layout_marginLeft="15dp"
+             android:layout_alignParentLeft="true"
+             android:layout_alignParentTop="true"
+             android:orientation="vertical" >
+
+             <TextView
+                 android:id="@+id/spinner_title_textView2"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:ellipsize="end"
+                 android:lines="1"
+                 android:text="Purchase tickets"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textColor="@color/web_purchase_title_color"
+                 android:textSize="20sp" />
+
+<!--              <TextView
+                 android:id="@+id/sub_title_textView2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:ellipsize="end"
+                 android:lines="1"
+                 android:text="Denver, Co"
+                 android:textColor="@color/dark_holo_blue_text_color_2"
+                 android:textStyle="normal" /> -->
+         </LinearLayout>
+    
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout1arist_all_event" />
+
+</RelativeLayout>
+
+

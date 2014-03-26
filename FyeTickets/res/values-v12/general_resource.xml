@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Apllication name -->
+    <string name="app_name">FYETickets</string>
+    
+    <!-- All color code -->
+    <color name="fbgfbf">#FFA500</color>
+      
+  	<color name="selected_bar_tab_orange_tab">#FFA500</color>
+  	 
+    <color name="main_page_background_color">#ffffff</color>
+    <color name="main_page_type_of_select_title_text_color">#053382</color>
+    <color name="main_page_type_of_select_subtitle_location_text_color">#053382</color>
+     
+    <color name="main_page_spinner_background_color">#53C3EB</color>
+    <color name="main_page_spinner_text_color">#ffffff</color>
+         
+    <color name="event_sort_background_color">#053A77</color>
+    <color name="event_sort_text_color">#53C3EB</color>
+    <color name="event_sort_divider_color">#53C3EB</color>
+    <color name="list_white">#ffffff</color>
+    
+    <color name="event_filter_background_color">#053A77</color>
+    <color name="event_filter_bar_color">#222222</color>
+    <color name="event_filter_title_text_color">#ffffff</color>
+    <color name="event_filter_text_color_white">#ffffff</color>
+    <color name="event_filter_divider_color_black">#222222</color>
+    <color name="event_filter_radius_seekbar_color">#ffffff</color>
+    
+   <!--  <color name="default_screen_bg">#20324a</color>
+    <color name="rounded_container_bg">#80000000</color> 
+    <color name="rounded_container_border">#3b3f44</color>-->
+    <color name="event_filter_radius_seekbar_light_gray_header_color">#646663</color>
+    
+    <color name="favorites_background">#ffffff</color>
+    <color name="favorites_listview_divider">#E6E6E6</color> 
+     
+    
+    <color name="search_listview">#E6E6E6</color>
+    
+    <color name="reminder_background_color">#ffffff</color>
+    <color name="reminder_title_text_color">#000000</color>
+    <color name="reminder_date_text_color">#000000</color>
+    <color name="reminder_date_field_color">#ffffff</color>
+    <color name="reminder_address_text_color">#000000</color>
+    <color name="reminder_address_field_color">#ffffff</color>
+    <color name="reminder_done_button_text_color">#000000</color>
+   
+    <color name="tickets_background_color">#ffffff</color>
+    <color name="tickets_sorting_bar_background_color">#053A77</color>
+    <color name="tickets_sorting_bar_text_color">#53C3EB</color>
+    <color name="tickets_sorting_bar_divider_color">#53C3EB</color>
+    <color name="tickets_list_showing_color">#053A77</color>
+     
+    <color name="ticket_more_info_background_color">#53C3EB</color>
+    <color name="ticket_more_info_background_divider_color">#053A77</color>
+    <color name="ticket_more_info_text_color">#ffffff</color> 
+    
+    <color name="ticket_row_month_text_color">#ffffff</color>
+    <color name="ticket_row_ROW_name_text_color">#000000</color>
+    <color name="ticket_row_ROW_value_text_color">#000000</color>
+    <color name="ticket_row_section_text_color">#000000</color>
+    <color name="ticket_row_noOfTicket_text_color">#A4A4A4</color>
+    <color name="ticket_row_divider_color">#A4A4A4</color>
+    <color name="ticket_row_price_color">#000000</color>
+    <color name="ticket_row_price_value_color">#01DF01</color>
+       
+    <color name="ticket_filter_background_color">#053A77</color>
+    <color name="ticket_filter_bar_color">#222222</color>
+    <color name="ticket_filter_divider_color">#222222</color>
+    <color name="ticket_filter_text_color">#ffffff</color>
+    <color name="ticket_filter_button_text_color">#053A77</color>
+     
+    <color name="ticket_purchase_seat_icon_backround_color">#ffffff</color>
+    <color name="ticket_purchase_ticket_info_bar_color">#53C3EB</color>
+    <color name="ticket_purchase_ticket_info_background_color">#053A77</color>
+    <color name="ticket_purchase_ticket_info_title_text_color">#053A77</color>
+    <color name="ticket_purchase_ticket_info_text_color">#53C3EB</color>
+     
+    <color name="ticket_purchase_per_person_price_bar_color">#053A77</color>
+    <color name="ticket_purchase_per_person_price_text_color">#53C3EB</color>
+    <color name="ticket_purchase_detail_background_color">#ffffff</color>
+    <color name="ticket_purchase_ticket_detail_text_color_1">#000000</color>
+    <color name="ticket_purchase_ticket_detail_text_color_2">#053A77</color>
+    <color name="ticket_purchase_change_quantity_button_text_color">#053A77</color>
+    <color name="ticket_purchase_ticket_button_text_color">#053A77</color>
+     
+    <color name="tickets_more_info_direction_bar_color">#53C3EB</color>
+    <color name="tickets_more_info_direction_background_color">#053A77</color> 
+    <color name="tickets_more_info_direction_location_text_color_1">#53C3EB</color> 
+    <color name="tickets_more_info_direction_location_text_color_2">#53C3EB</color>
+    <color name="tickets_more_info_direction_date_time_text_color_1">#53C3EB</color> 
+    <color name="tickets_more_info_direction_date_time_text_color_2">#53C3EB</color>
+    <color name="tickets_more_info_direction_go_direction_button_text_color">#053A77</color>
+        
+    <color name="venue_row_name_text_color">#000000</color>
+    <color name="venue_row_address_text_color">#A4A4A4</color>
+    <color name="venue_row_next_performor_text_color">#A4A4A4</color>
+    <color name="venue_row_divider_color">#A4A4A4</color>
+    <color name="venue_background_color">#ffffff</color>
+    <color name="venue_listview_background_color">#ffffff</color>
+     
+    <color name="about_text_color">#ffffff</color>
+    <color name="about_copyright_color">#ffffff</color>
+    <color name="about_version_color">#ffffff</color>        
+   
+    <color name="event_view_background_color">#ffffff</color>
+    <color name="performer_search_background_color">#ffffff</color>
+    <color name="performer_search_text_color">#ffffff</color>
+    
+    <color name="location_search_background_color">#ffffff</color> 
+    <color name="location_search_row_text_color">#000000</color>
+    <color name="location_search_auto_complite_background_color">#ffffff</color> 
+    <color name="location_search_auto_complite_text_color">#000000</color>     
+    <color name="location_search_row_background_color">#00000000</color>
+    <color name="terms_condition_title_text">#053A77</color>
+    
+    <color name="event_row_background_color">#00000000</color>
+    <color name="event_row_week_text_color">#ffffff</color> 
+    <color name="event_row_month_text_color">#000000</color>
+    <color name="event_row_day_text_color">#000000</color>
+    <color name="event_row_title_text_color">#000000</color>
+    <color name="event_row_sub_title_text_color_1">#A4A4A4</color>
+    <color name="event_row_sub_title_text_color_2">#A4A4A4</color>
+    <color name="event_row_divider_color_1">#A4A4A4</color>
+    <color name="event_row_divider_color_2">#A4A4A4</color>     
+    <color name="event_row_section_header_background_color">#00000000</color>
+    <color name="event_row_section_header_text_color">#A4A4A4</color>
+    <color name="event_row_divider_color_3">#A4A4A4</color>
+    <color name="share_view_background_color">#53C3EB</color>
+    <color name="share_view_text_color">#ffffff</color>
+    <color name="share_view_divider_color">#000000</color>
+     
+    <color name="web_purchase_title_color">#053A77</color>
+     
+    <color name="more_performer_detail_title_color">#053A77</color>
+    
+    <color name="light_holo_blue_text_color_1">#53C3EB</color>
+    <color name="dark_holo_blue_text_color_2">#053A77</color>
+     
+     
+     
+    
+    
+    <!-- Defult color code  -->
+    <color name="transparent">#00000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>  
+    <color name="gray">#A4A4A4</color>
+    
+       
+    <!-- Events menu string is the string that initially show in spinner  -->  
+    <string name="tickets_prompt">All Tickets</string>
+    <string-array name="fye_menu_array">
+        <item>Events</item>
+        <item>Venues</item>
+        <item>Artist/Teams</item>
+        <item>Favorites</item>
+        <item>About</item>
+        <item>Location</item>
+    </string-array>
+    <!-- Application api link -->
+    <string name="artist_teams">http://mobapi.atbss.com/performers?sort=performer.name.desc</string><!-- change url-->
+    <string name="search_google_api_">http://maps.googleapis.com/maps/api/geocode/json?</string>
+    <string name="artist_teams_events">http://mobapi.atbss.com/events?</string>
+    <string name="artist_teams_venues">http://mobapi.atbss.com/venues?</string>
+    <string name="events_tickets">http://mobapi.atbss.com/tickets?</string>  
+    <string name="events_performers">http://mobapi.atbss.com/performers?</string> 
+    
+    <!-- Use for share -->
+    <string name="web_logo_share">http://www.fyetickets.com/content/images/logoModified.png</string>
+    <string name="web_site_link">http://www.fyetickets.com/</string>
+    <string name="share_message">I am using FyeTickets application to buy tickets!</string>
+    <string name="play_store_app_link">http://play.google.com/store/apps/details?id=</string>
+    <string name="play_store_link">http://play.google.com/store/apps/</string>
+    
+    <!-- Delivery method notes -->
+    <string name="emailticketMess">Tickets market with this symbol are e-tickets. They will be available for you to download and print, usually within one (1) business day of when you place your order.</string>
+    <string name="instantticketMess">E-Ticket marked as "instant" will be available of you to download and print within minutes of placing your order.</string>
+    <string name="validticketMess">Ticket marked with this symbol are vaild for hotel stays, in most cases you will still need a valid ticket to the event.</string>
+    <string name="foodticketMess">Package ticket normally include food and drink along with your event ticket, though some package tickets include other amenities like VIP passes and more. Please consult the ticket notes for more detail.</string>
+    <string name="parkingticketMess">Tickets marked with this symbol are void for parking ONLY and are not tickets to the event. You will still need a valid ticket to the event.</string>
+    
+    <!-- Web site link -->
+    <string name="web_site_domain_link">http://www.fyetickets.com</string>
+    
+    <!-- term and condition link  -->
+    <string name="term_and_condition_link">http://m.cellseats.com/policies</string>
+    
+    <!-- term and condition link  -->
+    <string name="copyright_fye_tickets_">Copyright FYE Tickets, 2013</string>
+    
+    <!-- support and sales mail id -->
+    <string-array name="mail_id_array">
+        <item>sales@fyetickets.com</item>
+    </string-array>
+</resources>

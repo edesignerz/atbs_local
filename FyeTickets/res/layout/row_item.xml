@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:id="@+id/row_list_"
+    android:background="@color/event_row_background_color">
+    <LinearLayout android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:padding="5dp" >
+<!-- 		<LinearLayout android:id="@+id/weekends_day_LinearLayout_"
+		    android:layout_width="21dp"
+    	android:layout_height="60dp"
+    	android:orientation="horizontal"
+    	android:background="@drawable/section_flag_standard">
+    	    <TextView android:id="@+id/weekends_day_textview_"
+    	        android:layout_width="wrap_content"
+    	        android:layout_height="wrap_content"
+    	        android:text="FRI"
+    	        android:textSize="14sp"
+    	        android:layout_gravity="bottom"
+    	        android:layout_marginBottom="3dp"
+    	        android:textColor="@color/event_row_week_text_color"
+    	        android:rotation="-90"/>
+    	</LinearLayout> -->
+   	<com.dds.fye.tickets.customtextview.VerticalTextView 
+        android:id="@+id/weekends_day_textview"
+        android:layout_width="17dp"
+        android:layout_height="58dp"
+        android:text="FRI"
+        style="@style/verticalTextStyle"
+        android:textColor="@color/event_row_week_text_color"
+        android:background="@drawable/section_flag_standard"/>  
+           
+    	<LinearLayout
+    	    android:layout_width="0dp"
+    	    android:layout_height="wrap_content"
+    	    android:layout_weight="0.4"
+    	    android:orientation="vertical" 
+    	    android:layout_marginLeft="3dp">
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                        <TextView
+            				android:id="@+id/month_textView1"
+            				android:layout_width="43dp"
+            				android:layout_height="wrap_content"
+            				android:text="MAR"
+            				android:paddingLeft="3dp"
+            				android:textColor="@color/event_row_month_text_color"
+            				android:textAppearance="?android:attr/textAppearanceMedium" />
+                       <TextView
+        					android:id="@+id/textView1"
+        					android:layout_width="match_parent"
+        					android:layout_height="wrap_content"
+        					android:lines="1"
+        					android:layout_marginLeft="3dp"
+        					android:ellipsize="end"        					
+        					android:textColor="@color/event_row_title_text_color"
+        					android:text=""         	              	
+        					android:textAppearance="?android:attr/textAppearanceMedium" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                        <TextView
+            				android:id="@+id/day_textView2"
+            				android:layout_width="43dp"
+            				android:layout_height="wrap_content"
+            				android:paddingLeft="3dp"
+            				android:text=""
+            				android:maxLength="2"
+            				android:textSize="33sp"
+            				android:gravity="top"
+            				android:textColor="@color/event_row_day_text_color"/>
+                        <LinearLayout android:layout_width="match_parent"
+                			android:layout_height="wrap_content"
+                			android:layout_marginLeft="5dp"
+                			android:orientation="vertical">
+                                
+    	  					<TextView
+        						android:id="@+id/address_textView2"
+        						android:layout_width="match_parent"
+        						android:layout_height="wrap_content"
+        						android:text="" 
+        						android:lines="1"
+        						android:ellipsize="end"
+        						android:textColor="@color/event_row_sub_title_text_color_1"    
+        						android:textSize="14sp" />
+    	  
+    	   					<TextView
+        						android:id="@+id/date_time_info_textView2"
+        						android:layout_width="match_parent"
+        						android:layout_height="match_parent"
+        						android:text="" 
+        						android:textColor="@color/event_row_sub_title_text_color_2"   
+        						android:textSize="14sp" />
+                        </LinearLayout>
+            </LinearLayout>
+    	</LinearLayout>
+
+    	<View
+    	    android:id="@+id/favorite_seperater_view1"
+    	    android:layout_width="0.2dp"
+    	    android:background="@color/event_row_divider_color_1"
+    	    android:layout_marginLeft="5dp"
+    	    android:layout_marginRight="5dp"
+    	    android:layout_marginTop="3dp"
+    	    android:layout_marginBottom="3dp"
+    	    android:layout_height="match_parent" />
+
+<!--     	<ImageView
+    	    android:id="@+id/favorite_imageView1"
+    	    android:layout_width="30dp"
+    	    android:layout_height="30dp"
+    	    android:layout_gravity="center_vertical"
+    	    android:layout_marginLeft="3dp"
+    	    android:layout_marginRight="20dp"
+    	    android:src="@drawable/favorite_default" /> -->
+    	    
+  	   <ToggleButton android:id="@+id/favorite_ToggleButton"
+			android:layout_width="35dp"
+			android:layout_height="35dp" 
+		    android:layout_gravity="center_vertical"
+		    style="@style/Widget.Button.Toggle"
+    	    android:layout_marginLeft="3dp"
+    	    android:layout_marginRight="20dp"
+   			android:checked="true"				    
+			android:textOn=""
+			android:textOff=""
+			android:text=""/> 
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="0.6dp" 
+        android:layout_marginRight="18dp"       
+        android:background="@color/event_row_divider_color_2"/>
+    
+</LinearLayout>

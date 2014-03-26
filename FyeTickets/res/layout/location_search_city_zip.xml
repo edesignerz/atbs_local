@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/location_search_background_color">
+   
+    <!-- Framelayout to display Fragments -->
+   <FrameLayout
+       android:id="@+id/frame_container"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@+id/relativeLayout1" >
+
+       <ListView
+           android:id="@+id/city_name_listView1"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent" >
+       </ListView>
+
+   </FrameLayout>
+
+<!--    <RelativeLayout
+       android:id="@+id/relativeLayout1"
+       android:layout_width="match_parent"
+       android:layout_height="70dp"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentTop="true" > -->
+	<LinearLayout
+ 	    android:id="@+id/relativeLayout1"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="70dp"
+ 	    android:layout_alignParentLeft="true"
+ 	    android:layout_alignParentRight="true"
+ 	    android:layout_alignParentTop="true"
+ 	    android:background="@drawable/action_bar"
+ 	    android:orientation="horizontal" >
+
+     <LinearLayout android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:gravity="center_vertical"
+         android:orientation="horizontal"
+         android:id="@+id/location_back_button"
+         android:paddingLeft="5dp">
+         <ImageView
+            android:id="@+id/location_search_imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_button" />
+         <ImageView
+            android:id="@+id/left_buton_imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/action_bar_logo" />
+     </LinearLayout>
+
+     <AutoCompleteTextView
+         android:id="@+id/city_zip_search_autoCompleteTextView1"
+         android:layout_width="0dp"
+         android:layout_weight="1"
+         android:layout_height="33dp"
+         android:layout_gravity="center_vertical"
+         android:layout_marginLeft="6dp"
+         android:layout_marginRight="6dp"
+         android:paddingLeft="5dp"
+         android:background="@color/location_search_auto_complite_background_color"
+         android:ems="10"
+         android:textSize="14sp"
+         android:textColor="@color/location_search_auto_complite_text_color"
+         android:hint="Search by city or Zip code" >
+
+         <requestFocus />
+     </AutoCompleteTextView>
+ 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal" >
+
+         <ImageView            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/location_button"  />
+     </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

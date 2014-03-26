@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dds.fye.tickets"
+    android:versionCode="1"
+    android:versionName="1.1.9" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+    
+    <uses-library android:name="com.google.android.maps"/>
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+	
+ 	<!-- Required to show current location -->
+  	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+  	
+  	<uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+  	<uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    
+    <uses-permission android:name="com.dds.fye.tickets.permission.MAPS_RECEIVE"/> 
+  	<permission
+        android:name="com.dds.fye.tickets.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+     <!-- Required OpenGL ES 2.0. for Maps V2 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- Requires OpenGL ES version 2 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/fye_tickets_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!--  android:value="@integer/google_play_services_version" -->
+         <!-- Goolge API Key -->
+         <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyD8cIc-6JRPOa3pS3jHcecrgrvElCbTBPM" /> 
+            <!-- <real : - AIzaSyD8cIc-6JRPOa3pS3jHcecrgrvElCbTBPM
+                  android:value="AIzaSyBRffHMwH7NOeSbv1WcMSIsWrygek8mm2I" /> -->
+        <activity
+            android:name="com.dds.fye.tickets.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         <activity  android:name="com.dds.fye.tickets.SearchFragmentActivity"
+            android:screenOrientation="portrait"></activity>  
+         <activity  android:name="com.dds.fye.tickets.VenueSearchFragmentActivity"
+            android:screenOrientation="portrait"></activity> 
+         <activity  android:name="com.dds.fye.tickets.PerformerSearchFragmentActivity"
+            android:screenOrientation="portrait"></activity> 
+        <activity  android:name="com.dds.fye.tickets.ArtistTeamsEventList"
+            android:screenOrientation="portrait"></activity>  
+         <activity  android:name="com.dds.fye.tickets.SearchLocation"
+            android:screenOrientation="portrait"></activity>
+        <activity  android:name="com.dds.fye.tickets.WebViewFragmentActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity  android:name="com.dds.fye.tickets.TermsAndCondition"
+            android:screenOrientation="portrait"></activity>        
+         <activity  android:name="com.dds.fye.tickets.ReminderActivity"
+            android:screenOrientation="portrait"></activity> 
+         <activity  android:name="com.dds.fye.tickets.MorePerformerDetailList"
+            android:screenOrientation="portrait"></activity>
+            
+ 		<activity  android:name="com.dds.fye.tickets.share.TwitterShare"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="oauth" android:host="t4jsample"/>
+            </intent-filter>
+         </activity>
+         
+          <service  android:name="com.dds.fye.tickets.share.TwitterShareActivity"
+            android:screenOrientation="portrait">
+ 	       <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="oauth" android:host="t4jsample"/>
+            </intent-filter> 
+          </service>
+        <activity android:name="com.facebook.LoginActivity"
+                  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                  android:label="@string/app_name" />
+       
+      <activity  android:name="com.dds.fye.tickets.share.FacebookShareActivity"
+            android:screenOrientation="portrait"></activity> 
+            
+      <activity  android:name="com.dds.fye.tickets.share.MailActivity"
+            android:screenOrientation="portrait"></activity>
+            
+      <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_appid"/>  
+
+            
+    </application>
+
+</manifest>

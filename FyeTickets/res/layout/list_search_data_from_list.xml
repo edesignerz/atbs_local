@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/performer_search_background_color">
+    
+<RelativeLayout
+    android:id="@+id/relativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@drawable/action_bar"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/data_search_back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp" >
+
+        <ImageView
+            android:id="@+id/location_search_imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_button" />
+
+        <ImageView
+            android:id="@+id/left_buton_imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/action_bar_logo" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/search_button" />
+
+    <EditText
+        android:id="@+id/event_venu_perfo_search_EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/imageView1"
+        android:layout_toRightOf="@+id/data_search_back_button"
+        android:background="@color/performer_search_text_color"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:hint="Search all Events, Venue and Performers"
+        android:paddingLeft="5dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="14sp" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>
+		<ListView
+		    android:id="@+id/search_event_page_listView1"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"	    		 
+		    android:cacheColorHint="@android:color/transparent"
+		    android:divider="@android:color/transparent"
+		    android:fastScrollEnabled="true" 
+			android:fastScrollAlwaysVisible="true">
+		</ListView>	
+</LinearLayout>

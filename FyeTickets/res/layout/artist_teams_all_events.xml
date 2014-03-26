@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+    
+ 	<RelativeLayout
+ 	    android:id="@+id/relativeLayout1arist_all_event"
+ 	    android:layout_width="match_parent"
+ 	    android:layout_height="70dp"
+ 	    android:background="@drawable/action_bar"
+ 	    android:orientation="horizontal" >
+
+     <LinearLayout android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:gravity="center_vertical"
+         android:orientation="horizontal"
+         android:paddingLeft="5dp"
+         android:id="@+id/back_linearlayout">
+         
+         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_button" />
+         
+         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/action_bar_logo" />
+         
+     </LinearLayout>
+
+     <LinearLayout
+         android:id="@+id/share_filter_layout"
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:layout_alignParentRight="true"
+         android:layout_alignParentTop="true"
+         android:gravity="center_vertical|right"
+         android:orientation="horizontal" >
+
+         <ImageView
+             android:id="@+id/event_filter_and_event_info_imageView3_"
+             android:layout_width="38dp"
+             android:layout_height="38dp"
+             android:padding="5dp"
+             android:layout_marginRight="5dp" />
+
+         <ImageView
+             android:id="@+id/event_share_buton_imageView2_"
+             android:layout_width="38dp"
+             android:layout_height="38dp"
+              android:padding="5dp"
+             android:src="@drawable/overflow_menu_button" />
+         
+     </LinearLayout>
+     
+     <LinearLayout
+         android:id="@+id/custom_spinner_layout"
+         style="@style/MySpinnerDropDownItem"
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:layout_alignParentTop="true"
+         android:layout_toLeftOf="@+id/share_filter_layout"
+         android:layout_toRightOf="@+id/back_linearlayout"
+         android:gravity="center"
+         android:layout_marginLeft="5dp"
+         android:layout_marginRight="10dp"
+         android:orientation="horizontal" >
+         <LinearLayout android:layout_width="0dp"
+             android:layout_weight="0.5"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+             <TextView
+             	android:id="@+id/spinner_title_textView2"
+             	android:layout_width="match_parent"
+             	android:layout_height="wrap_content"
+             	android:ellipsize="end"
+             	android:lines="1"
+             	android:text=""
+             	android:textAppearance="?android:attr/textAppearanceMedium"
+             	android:textColor="@color/dark_holo_blue_text_color_2"
+             	android:textSize="20sp"
+             	android:textStyle="normal"/>            
+             <TextView
+                 android:id="@+id/sub_title_textView2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:ellipsize="end"
+                 android:lines="1"                 
+                 android:textColor="@color/dark_holo_blue_text_color_2"
+                 android:textStyle="normal" />
+         </LinearLayout>         
+       <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:gravity="bottom"
+             android:paddingBottom="15dp"
+             android:orientation="vertical" > 
+
+             <ImageView
+                 android:id="@+id/custom_spinner_ImageView2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="bottom"
+                 android:layout_marginLeft="5dp"
+                 android:src="@drawable/action_bar_selector" />
+      </LinearLayout> 
+     </LinearLayout>
+    </RelativeLayout>
+
+    <ViewFlipper android:id="@+id/events_view_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:layout_marginTop="63dp">
+     	<!-- First view android:layout_below="@+id/relativeLayout1arist_all_event" -->
+        <ListView
+           android:id="@+id/artist_teams_events_listView1"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:divider="@android:color/transparent"
+           android:fastScrollEnabled="true" 
+           android:background="@color/event_view_background_color"
+           android:fastScrollAlwaysVisible="true">
+        </ListView>  
+       <!-- Second view  -->
+     <RelativeLayout android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="@color/tickets_background_color">
+
+     <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+         <LinearLayout android:id="@+id/sort_id_layout"
+           android:layout_width="match_parent"
+           android:layout_height="38dp" 
+           android:background="@color/tickets_sorting_bar_background_color"
+           android:orientation="horizontal">
+     	<LinearLayout android:layout_width="0dp"
+           android:layout_height="match_parent" 
+           android:layout_weight="0.2"
+           android:orientation="vertical" 
+           android:id="@+id/price_layout">
+    		
+     		<TextView
+     		    android:id="@+id/textView1"
+     		    android:layout_width="match_parent"
+     		    android:layout_height="0dp"
+     		    android:layout_weight="1"
+     		    android:text="PRICE"
+     		    android:textSize="12sp"
+     		    android:textColor="@color/tickets_sorting_bar_text_color"
+     		    android:gravity="center"
+     		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     		<ImageView
+     		    android:id="@+id/price_imageView1"
+     		    android:layout_width="match_parent"
+     		    android:layout_height="8dp"
+     		    android:background="@color/selected_bar_tab_orange_tab" />
+   	    
+     	</LinearLayout>
+     	<View
+     		    android:id="@+id/view1"
+     		    android:layout_width="0.3dp"
+     		    android:background="@color/tickets_sorting_bar_divider_color"
+     		    android:layout_height="match_parent" 
+     		    android:layout_marginTop="6dp"
+     		    android:layout_marginBottom="12dp"/>
+     	<LinearLayout android:layout_width="0dp"
+           android:layout_height="match_parent" 
+           android:layout_weight="0.2"
+           android:orientation="vertical" 
+           android:id="@+id/e_ticket_layout">
+     		<TextView
+     		    android:id="@+id/textView1"
+     		    android:layout_width="match_parent"
+     		    android:layout_height="0dp"
+     		    android:layout_weight="1"
+     		    android:text="E-TICKET"
+     		    android:textSize="12sp"
+     		    android:textColor="@color/tickets_sorting_bar_text_color"
+     		    android:gravity="center"
+     		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     		<ImageView
+     		    android:id="@+id/e_ticket_imageView1"
+     		    android:layout_width="match_parent"
+     		    android:layout_height="8dp" />
+   	    
+     	</LinearLayout>
+     	<View
+     		    android:id="@+id/view1"
+     		    android:layout_width="0.3dp"
+     		    android:background="@color/tickets_sorting_bar_divider_color"
+     		    android:layout_height="match_parent" 
+     		    android:layout_marginTop="6dp"
+     		    android:layout_marginBottom="12dp"/>
+     	<LinearLayout android:layout_width="0dp"
+           android:layout_height="match_parent" 
+           android:layout_weight="0.2"
+           android:orientation="vertical" 
+           android:id="@+id/section_layout">
+     		<TextView
+     		    android:id="@+id/textView1"
+     		    android:layout_width="match_parent"
+     		    android:layout_height="0dp"
+     		    android:layout_weight="1"
+     		    android:textSize="12sp"
+     		    android:text="SECTION"
+     		    android:textColor="@color/tickets_sorting_bar_text_color"
+     		    android:gravity="center"
+     		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     		<ImageView
+     		    android:id="@+id/section_imageView1"
+     		    android:layout_width="match_parent"
+     		    android:layout_height="8dp" />
+   	    
+     	</LinearLayout>
+     	<View
+     		    android:id="@+id/view1"
+     		    android:layout_width="0.3dp"
+     		    android:background="@color/tickets_sorting_bar_divider_color"
+     		    android:layout_height="match_parent" 
+     		    android:layout_marginTop="6dp"
+     		    android:layout_marginBottom="12dp"/>
+     	<LinearLayout android:layout_width="0dp"
+           android:layout_height="match_parent" 
+           android:layout_weight="0.2"
+           android:orientation="vertical" 
+           android:id="@+id/row_layout">
+     		<TextView
+     		    android:id="@+id/textView1"
+     		    android:layout_width="match_parent"
+     		    android:layout_height="0dp"
+     		    android:layout_weight="1"
+     		    android:textSize="12sp"
+     		    android:text="ROW"
+     		    android:textColor="@color/tickets_sorting_bar_text_color"
+     		    android:gravity="center"
+     		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     		<ImageView
+     		    android:id="@+id/row_imageView1"
+     		    android:layout_width="match_parent"
+       		    android:layout_height="8dp" />
+   	    
+     	</LinearLayout>
+
+     </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+            	android:layout_height="0dp"
+            	android:layout_weight="1"
+            	android:orientation="vertical">
+            	<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="0.3"                   
+                    android:background="@android:color/white" >
+
+            		<ScrollView
+            		    android:id="@+id/scrollView1"
+            		    android:layout_width="match_parent"
+            		    android:layout_height="match_parent" >
+
+            		    <LinearLayout
+            		        android:layout_width="match_parent"
+            		        android:layout_height="0dp"
+            		        android:gravity="center"
+            		        android:orientation="vertical" >
+
+            		        <ImageView
+                        		android:id="@+id/seting_row_imageView1"
+                        		android:layout_width="wrap_content"
+                       			android:layout_height="wrap_content"/> 
+            		    </LinearLayout>
+            		</ScrollView>
+                                 
+                </LinearLayout>
+                <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5">
+            		
+                   <LinearLayout  android:id="@+id/ticketList_title_linearlyout"
+                    android:layout_width="match_parent"
+            		android:layout_height="50dp"
+            		android:orientation="horizontal"
+            		android:gravity="center_vertical"
+            		android:paddingTop="3dp"
+           			android:background="@drawable/action_bar">
+
+				<TextView
+				    android:id="@+id/filter_tickets_list_name_textView_"
+				    android:layout_width="0dp"
+				    android:layout_height="wrap_content"
+				    android:layout_gravity="center_vertical"
+				    android:text="Showing Tickets: All Tickets"
+				    android:textStyle="bold"
+				    android:ellipsize="end"
+				    android:lines="1"
+				    android:layout_weight="0.8"
+				    android:layout_marginLeft="5dp"
+				    android:textColor="@color/tickets_list_showing_color"
+				    android:textAppearance="?android:attr/textAppearanceMedium" />
+				
+				<ToggleButton android:id="@+id/second_add_to_favorites_ToggleButton"
+				    android:layout_width="35dp"
+				    android:layout_height="35dp"
+				    android:layout_marginRight="3dp"				     
+   					android:checked="true"				    
+				    android:textOn=""
+				    android:textOff=""
+				    android:text=""
+				    android:layout_marginTop="2dp"
+				    android:layout_gravity="top"
+				    style="@style/Widget.Button.Toggle"/>
+							    
+			</LinearLayout>
+			  <ListView android:layout_below="@+id/ticketList_title_linearlyout"
+                android:id="@+id/artist_teams_events_tickets_listView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:divider="@android:color/transparent"
+                android:fastScrollEnabled="true" 
+           		android:fastScrollAlwaysVisible="true">
+			</ListView>     
+	<LinearLayout 
+	    android:id="@+id/direction_view_pop_up"
+    	android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/tickets_more_info_direction_background_color">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="8dp"
+        android:gravity="center_vertical"
+        android:background="@color/tickets_more_info_direction_bar_color">
+
+        <TextView
+            android:id="@+id/performer_name_event_direction_info_textView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="Performer name"
+            android:textStyle="normal"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <ImageView
+            android:id="@+id/event_direction_info_close_textView2"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+        	android:layout_weight="0.09"
+			android:src="@drawable/event_information_close_button"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+	<ScrollView android:id="@+id/direction_event_info_scroll_view"
+        android:layout_width="match_parent"
+   	    android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingTop="20dp"
+		  android:paddingLeft="8dp"
+          android:orientation="horizontal">
+
+          <ImageView
+              android:id="@+id/imageView1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@drawable/event_information_address_icon" />
+
+          <TextView
+              android:id="@+id/textView1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Location:"
+              android:layout_marginLeft="5dp"
+              android:textColor="@color/tickets_more_info_direction_location_text_color_1"
+              android:textAppearance="?android:attr/textAppearanceMedium" />
+
+          <TextView
+              android:id="@+id/performer_address_textView2"
+              android:layout_width="0dp"
+              android:layout_weight="0.7"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="10dp"
+              android:text=""
+              android:textColor="@color/tickets_more_info_direction_location_text_color_2"
+              android:textAppearance="?android:attr/textAppearanceMedium" />
+
+          <ImageView
+              android:id="@+id/add_to_contact_imageView2"
+              android:layout_width="0dp"
+              android:layout_weight="0.3"
+              android:layout_gravity="right"
+              android:layout_height="28dp"
+              android:src="@drawable/event_information_create_contact_icon" />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" 
+          android:orientation="horizontal"
+          android:paddingLeft="8dp">
+
+          <LinearLayout
+              android:layout_width="95dp"
+              android:layout_height="match_parent" 
+              android:orientation="horizontal">
+               <ImageView
+              	android:id="@+id/imageView1"
+              	android:layout_width="wrap_content"
+              	android:layout_height="wrap_content"
+              	android:src="@drawable/event_information_event_time_icon" />
+               
+              <TextView
+             	 android:id="@+id/textView1"
+             	android:layout_width="match_parent"
+              	android:layout_height="wrap_content"
+              	android:text="Time:"
+              	android:gravity="right"
+              	android:layout_marginLeft="5dp"
+              	android:textColor="@color/tickets_more_info_direction_date_time_text_color_1"
+              	android:textAppearance="?android:attr/textAppearanceMedium" />
+              
+          </LinearLayout>
+           <LinearLayout
+              android:layout_width="0dp"
+              android:layout_weight="0.8"
+              android:layout_height="match_parent" 
+              android:orientation="horizontal">
+
+          <TextView
+              android:id="@+id/performer_date_time_textView2"
+              android:layout_width="0dp"
+              android:layout_weight="0.7"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="12dp"
+              android:text=""
+              android:textColor="@color/tickets_more_info_direction_date_time_text_color_2"
+              android:textAppearance="?android:attr/textAppearanceMedium" />
+
+          <ImageView
+              android:id="@+id/add_to_remider_imageView2"
+              android:layout_width="0dp"
+              android:layout_weight="0.3"
+              android:layout_gravity="right"
+              android:layout_height="28dp"
+              android:src="@drawable/event_information_add_to_calendar_icon" />
+              
+          </LinearLayout>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" 
+          android:layout_marginTop="20dp"
+          android:layout_marginLeft="30dp"
+          android:layout_marginRight="15dp"
+          android:gravity="center">
+
+          <ImageView
+              android:id="@+id/imageView3"
+              android:layout_width="90dp"
+              android:layout_height="match_parent"
+              android:src="@drawable/ic_launcher" />
+
+<!--           <WebView  class="com.google.android.gms.maps.SupportMapFragment"
+              android:id="@+id/crop_map_view_webView1"
+              android:layout_width="200dp"
+              android:layout_height="wrap_content" /> -->
+                   
+         <fragment 
+              android:id="@+id/map"
+        	  android:layout_width="match_parent"
+        	  android:layout_height="130dp" 
+        	  android:name="com.google.android.gms.maps.MapFragment" />
+         
+
+      </LinearLayout>
+
+      <Button
+          android:id="@+id/get_direction_in_map_button1"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:gravity="center"
+          android:layout_marginLeft="60dp"
+          android:layout_marginRight="60dp"
+          android:layout_marginTop="20dp"
+          android:textColor="@color/tickets_more_info_direction_go_direction_button_text_color"
+          android:background="@drawable/purchase_tickets_button"
+          android:text="Get Directions" />
+
+      <View
+          android:id="@+id/view1"
+          android:layout_width="wrap_content"
+          android:layout_height="30dp" />
+    
+    </LinearLayout>
+
+</ScrollView>
+</LinearLayout> 
+           </RelativeLayout>
+                
+           </LinearLayout>                     
+        </LinearLayout>  
+    </RelativeLayout>  
+     <!-- Third view  -->
+     <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:background="@color/ticket_purchase_seat_icon_backround_color"
+                    android:layout_weight="0.3">
+   					<ScrollView
+            		    android:id="@+id/scrollView2"
+            		    android:layout_width="match_parent"
+            		    android:layout_height="match_parent" >
+
+            		    <LinearLayout
+            		        android:layout_width="match_parent"
+            		        android:layout_height="0dp"
+            		        android:gravity="center"
+            		        android:orientation="vertical" >
+
+            		        <ImageView
+                        		android:id="@+id/sitting_row_imageView2_view"
+                        		android:layout_width="wrap_content"
+                       			android:layout_height="wrap_content" /> 
+            		    </LinearLayout>
+            		</ScrollView>  
+            		<!-- Ticket notes view -->
+  					<LinearLayout 
+    					android:id="@+id/ticket_not_layout_view"
+    					android:layout_width="match_parent"
+   						android:layout_height="wrap_content"
+   						android:orientation="vertical"
+    					android:paddingLeft="10dp"
+    					android:paddingRight="10dp"
+    					android:layout_marginTop="8dp">
+
+    				 <LinearLayout
+        				android:layout_width="match_parent"
+        				android:layout_height="45dp" 
+        				android:paddingLeft="10dp"
+        				android:background="@color/ticket_purchase_ticket_info_bar_color"
+        				android:gravity="center_vertical">
+
+        				<TextView
+            				android:id="@+id/ticket_note_textView1"
+            				android:layout_width="0dp"
+            				android:layout_height="wrap_content"
+            				android:layout_weight="0.5"
+            				android:text="Ticket Notes"
+            				android:textStyle="normal"
+            				android:textColor="@color/ticket_purchase_ticket_info_title_text_color"
+            				android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        				<ImageView
+        				    android:id="@+id/ticket_note_close_textView2"
+        				    android:layout_width="0dp"
+        				    android:layout_height="30dp"
+        				    android:layout_gravity="center"
+        				    android:layout_weight="0.09"
+        				    android:src="@drawable/event_information_close_button"
+        				    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    				</LinearLayout>
+    				<ScrollView android:layout_width="match_parent"
+        				android:layout_height="wrap_content"
+        				android:scrollbars="vertical"	
+						android:overScrollMode="always" 
+        				android:isScrollContainer="true" 
+        				android:scrollbarAlwaysDrawVerticalTrack="true" 
+        				android:scrollbarStyle="outsideInset" 	
+        				android:background="@color/ticket_purchase_ticket_info_background_color">
+    				   <LinearLayout
+        				android:layout_width="match_parent"
+        				android:layout_height="match_parent"
+        				android:minHeight="88dp"
+        				android:orientation="vertical" 
+        				android:padding="10dp">
+
+         			 <TextView
+             			android:id="@+id/nots_of_tickets_textView7"
+             			android:layout_width="match_parent"
+             			android:layout_height="match_parent"
+             			android:text="No Ticket notes."
+             			android:textColor="@color/ticket_purchase_ticket_info_text_color"
+             			android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+     				</LinearLayout>
+    				</ScrollView>
+
+				   </LinearLayout>        
+ 			</RelativeLayout>
+            <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="50dp" 
+              android:orientation="horizontal"
+              android:gravity="center_vertical"
+              android:background="@color/ticket_purchase_per_person_price_bar_color">
+             <TextView
+                   android:id="@+id/price_ea_textView1"
+                   android:layout_width="0dp"
+                   android:layout_height="50dp"
+                   android:layout_weight="0.45"
+                   android:textStyle="normal"
+                   android:gravity="center_vertical"
+                   android:layout_marginLeft="5dp"
+                   android:textSize="18dp"
+				   android:textColor="@color/ticket_purchase_per_person_price_text_color" />
+              <ImageView
+                  android:id="@+id/third_test1_imageView1"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="0.15"                  
+                  android:layout_gravity="center"
+                  android:src="@drawable/instant_ticket_icon"
+                  android:visibility="invisible"/>
+
+              <ImageView
+                  android:id="@+id/third_hotel_imageView2"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="0.15"
+                  android:layout_gravity="center"
+                  android:src="@drawable/hotel_icon" 
+                  android:visibility="invisible"/>
+              
+              <ImageView
+                  android:id="@+id/third_instant_imageView3"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="0.15" 
+                  android:src="@drawable/instant_ticket_icon"
+                  android:layout_gravity="center"
+                  android:visibility="invisible"/>
+              
+              <ImageView
+                  android:id="@+id/third_email_imageView4"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="0.15"
+                  android:src="@drawable/instant_ticket_icon"
+                  android:layout_gravity="center"
+				  android:visibility="invisible"/>
+              
+              <ToggleButton android:id="@+id/third_ticket_add_favorites_ToggleButton"
+				  android:layout_width="35dp"
+				  android:layout_height="35dp"
+				  android:layout_marginRight="3dp"
+   				  android:checked="true"				    
+				  android:textOn=""
+				  android:textOff=""
+				  android:text=""
+				  android:layout_marginTop="5dp"
+				  android:layout_gravity="top"
+				  style="@style/Widget.Button.Toggle"/>
+
+          </LinearLayout>
+
+ 				<LinearLayout
+ 				    android:layout_width="match_parent"
+ 				    android:layout_height="0dp"	
+ 				    android:layout_weight="0.5"			    
+ 				    android:background="@color/ticket_purchase_detail_background_color"
+ 				    android:orientation="vertical" >
+
+ 				    <ScrollView
+ 				          android:id="@+id/scrollView1"
+ 				          android:layout_width="match_parent"
+ 				          android:layout_height="match_parent" >
+
+ 				         <LinearLayout
+ 				                 android:layout_width="match_parent"
+ 				                 android:layout_height="match_parent"
+ 				                 android:orientation="vertical" >
+ 				              <LinearLayout
+ 				                android:layout_width="match_parent"
+ 				                android:layout_height="60dp"
+ 				                android:gravity="center_vertical"
+ 				                android:orientation="horizontal" 
+ 				                android:layout_marginLeft="8dp">
+
+ 				            <TextView
+ 				                android:id="@+id/textView2"
+ 				                android:layout_width="0dp"
+ 				                android:layout_height="wrap_content"
+ 				                android:layout_weight="0.4"
+ 				                android:text="Event Date:"
+ 				                android:singleLine="true"
+ 				                android:lines="1"
+ 				                android:ellipsize="end"
+ 				                android:textSize="20sp"
+ 				                android:textColor="@color/ticket_purchase_ticket_detail_text_color_1"
+ 				                android:textAppearance="?android:attr/textAppearanceMedium"
+ 				                android:textStyle="normal" />
+
+ 				            <TextView
+ 				                android:id="@+id/event_date_textView7"
+ 				                android:layout_width="0dp"
+ 				                android:layout_height="wrap_content"
+ 				                android:layout_weight="0.8"
+ 				                android:textSize="20sp"
+ 				                android:textColor="@color/ticket_purchase_ticket_detail_text_color_2"
+ 				                android:textAppearance="?android:attr/textAppearanceMedium"
+ 				                android:textStyle="normal" />
+ 				       </LinearLayout>
+ 				       <View android:layout_height="0.5dp"
+ 				           android:layout_width="match_parent"
+ 				           android:layout_marginLeft="8dp"
+ 				           android:layout_marginRight="8dp"
+ 				           android:background="@color/gray"/>
+ 				       <LinearLayout android:layout_width="match_parent"
+ 				                android:layout_height="60dp"
+ 				                android:gravity="center_vertical"
+ 				                android:orientation="horizontal"
+ 				                android:layout_marginLeft="8dp">
+ 				            <LinearLayout
+ 				                android:layout_width="0dp"
+ 				                android:layout_height="wrap_content"
+ 				                android:layout_weight="0.4"
+ 				                android:orientation="vertical" >
+
+ 				                <TextView
+ 				                    android:id="@+id/textView9"
+ 				                    android:layout_width="wrap_content"
+ 				                    android:layout_height="wrap_content"
+ 				                    android:text="Section:"
+ 				                    android:singleLine="true"
+ 				                    android:lines="1"
+ 				                    android:ellipsize="end"
+ 				                    android:textSize="20sp"
+ 				                    android:textColor="@color/ticket_purchase_ticket_detail_text_color_1"
+ 				                    android:textAppearance="?android:attr/textAppearanceMedium"
+ 				                    android:textStyle="normal" />
+
+ 				                <TextView
+ 				                    android:id="@+id/textView8"
+ 				                    android:layout_width="wrap_content"
+ 				                    android:layout_height="wrap_content"
+ 				                    android:text="Row:"
+ 				                    android:singleLine="true"
+ 				                    android:lines="1"
+ 				                    android:textSize="20sp"
+ 				                    android:ellipsize="end"
+ 				                    android:textColor="@color/ticket_purchase_ticket_detail_text_color_1"
+ 				                    android:textAppearance="?android:attr/textAppearanceMedium"
+ 				                    android:textStyle="normal" />
+ 				         </LinearLayout>
+ 				          <LinearLayout
+ 				                android:layout_width="0dp"
+ 				                android:layout_height="wrap_content"
+ 				                android:layout_weight="0.8"
+ 				                android:orientation="vertical" >
+
+ 				                <TextView
+ 				                    android:id="@+id/event_section_textView10"
+ 				                    android:layout_width="wrap_content"
+ 				                    android:layout_height="wrap_content"
+ 				                    android:text=""
+ 				                    android:textSize="20sp"
+ 				                    android:textColor="@color/ticket_purchase_ticket_detail_text_color_2"
+ 				                    android:textAppearance="?android:attr/textAppearanceMedium"
+ 				                    android:textStyle="normal" />
+
+ 				                <TextView
+ 				                    android:id="@+id/event_row_textView11"
+ 				                    android:layout_width="wrap_content"
+ 				                    android:layout_height="wrap_content"
+ 				                    android:text=""
+ 				                    android:textSize="20sp"
+ 				                    android:textColor="@color/ticket_purchase_ticket_detail_text_color_2"
+ 				                    android:textAppearance="?android:attr/textAppearanceMedium"
+ 				                    android:textStyle="normal" />
+ 				            </LinearLayout>
+ 				       </LinearLayout>
+ 				       <View android:layout_height="0.5dp"
+ 				           android:layout_width="match_parent"
+ 				           android:layout_marginLeft="8dp"
+ 				           android:layout_marginRight="8dp"
+ 				           android:background="@color/gray"/>
+ 				       <LinearLayout android:layout_width="match_parent"
+ 				                android:layout_height="60dp"
+ 				                android:gravity="center_vertical"
+ 				                android:orientation="horizontal"
+ 				                android:layout_marginLeft="8dp">
+ 				            <LinearLayout
+ 				                android:layout_width="0dp"
+ 				                android:layout_height="wrap_content"
+ 				                android:layout_weight="0.4"
+ 				                android:orientation="vertical" >
+
+ 				                <TextView
+ 				                    android:id="@+id/textView9"
+ 				                    android:layout_width="wrap_content"
+ 				                    android:layout_height="wrap_content"
+ 				                    android:text="Quantity:"
+ 				                    android:singleLine="true"
+ 				                    android:lines="1"
+ 				                    android:textSize="20sp"
+ 				                    android:ellipsize="end"
+ 				                    android:textColor="@color/ticket_purchase_ticket_detail_text_color_1"
+ 				                    android:textAppearance="?android:attr/textAppearanceMedium"
+ 				                    android:textStyle="normal" />
+
+ 				                <TextView
+ 				                    android:id="@+id/textView8"
+ 				                    android:layout_width="wrap_content"
+ 				                    android:layout_height="wrap_content"
+ 				                    android:text="Subtotal:"
+ 				                    android:singleLine="true"
+ 				                    android:lines="1"
+ 				                    android:textSize="20sp"
+ 				                    android:ellipsize="end"
+ 				                    android:textColor="@color/ticket_purchase_ticket_detail_text_color_1"
+ 				                    android:textAppearance="?android:attr/textAppearanceMedium"
+ 				                    android:textStyle="normal" />
+ 				         </LinearLayout>
+ 				          <LinearLayout
+ 				                android:layout_width="0dp"
+ 				                android:layout_height="wrap_content"
+ 				                android:layout_weight="0.4"
+ 				                android:orientation="vertical" >
+
+ 				                <TextView
+ 				                    android:id="@+id/quantity_ticket_textView10"
+ 				                    android:layout_width="wrap_content"
+ 				                    android:layout_height="wrap_content"
+ 				                    android:text=""
+ 				                    android:textSize="20sp"
+ 				                    android:textColor="@color/ticket_purchase_ticket_detail_text_color_2"
+ 				                    android:textAppearance="?android:attr/textAppearanceMedium"
+ 				                    android:textStyle="normal" />
+
+ 				                <TextView
+ 				                    android:id="@+id/subtotal_price_textView11"
+ 				                    android:layout_width="wrap_content"
+ 				                    android:layout_height="wrap_content"
+ 				                    android:text=""
+ 				                    android:textSize="20sp" 				                   
+ 				                    android:textColor="@color/ticket_purchase_ticket_detail_text_color_2"
+ 				                    android:textAppearance="?android:attr/textAppearanceMedium"
+ 				                    android:textStyle="normal" />
+ 				            </LinearLayout>
+ 				            <LinearLayout android:layout_width="0dp"
+ 				                android:layout_height="wrap_content"
+ 				                android:layout_weight="0.4"
+ 				                android:orientation="vertical" >
+
+     			                <Button
+ 				                    android:id="@+id/change_qty_button1"
+ 				                    android:layout_width="wrap_content"
+ 				                    android:layout_height="30dp"
+ 				                    android:text="Change Qty" 
+ 				                    android:textSize="15sp"
+ 				                    android:textColor="@color/ticket_purchase_change_quantity_button_text_color"
+ 				                    android:layout_marginRight="10dp"
+ 				                    android:background="@drawable/change_quantity_button" /> 
+
+ 				            </LinearLayout>
+ 				       </LinearLayout>
+ 				       <View android:layout_height="0.5dp"
+ 				           android:layout_width="match_parent"
+ 				           android:layout_marginLeft="8dp"
+ 				           android:layout_marginRight="8dp"
+ 				           android:background="@color/gray"/>
+ 				       		<Button
+ 				        		android:id="@+id/purches_button_textView16"
+ 				        		android:layout_width="match_parent"
+ 				        		android:layout_height="50dp"
+ 				        		android:layout_marginTop="15dp"
+ 				        		android:layout_marginLeft="15dp"
+ 				        		android:layout_marginRight="15dp"
+ 				        		android:background="@drawable/purchase_tickets_button"
+ 				        		android:gravity="center"
+ 				        		android:textColor="@color/ticket_purchase_ticket_button_text_color"
+ 				        		android:text="Purchase Your 4 Ticets"
+ 				        		android:textAppearance="?android:attr/textAppearanceLarge"
+ 				        		android:textStyle="bold" />
+ 				       	<View android:layout_height="50dp"
+ 				           android:layout_width="match_parent"/>
+ 				       </LinearLayout>
+ 				   </ScrollView>
+ 				      
+ 			  </LinearLayout>                               
+            </LinearLayout>	           
+        </LinearLayout>  
+              
+     </ViewFlipper>
+</RelativeLayout>

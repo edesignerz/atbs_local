@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">  
+     	<LinearLayout android:id="@+id/sort_id_layout"
+           android:layout_width="match_parent"
+           android:layout_height="38dp" 
+           android:background="@color/event_sort_background_color"
+           android:orientation="horizontal">
+     	<LinearLayout android:layout_width="0dp"
+           android:layout_height="match_parent" 
+           android:layout_weight="0.2"
+           android:id="@+id/event_all_events_linearlayout"
+           android:orientation="vertical" >
+    		
+     		<TextView     		   
+     		    android:layout_width="match_parent"
+     		    android:layout_height="0dp"
+     		    android:layout_weight="1"
+     		    android:text="ALL EVENTS"
+     		    android:textSize="12sp"
+     		    android:textColor="@color/event_sort_text_color"
+     		    android:gravity="center"
+     		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     		<ImageView
+     		    android:id="@+id/event_all_event_imageView1"
+     		    android:layout_width="match_parent"
+     		    android:layout_height="8dp"
+     		    android:background="@color/selected_bar_tab_orange_tab" />
+   	    
+     	</LinearLayout>
+     	<View
+     		    android:id="@+id/view1"
+     		    android:layout_width="0.3dp"
+     		    android:background="@color/event_sort_divider_color"
+     		    android:layout_height="match_parent" 
+     		    android:layout_marginTop="6dp"
+     		    android:layout_marginBottom="12dp"/>
+     	<LinearLayout android:layout_width="0dp"
+           android:layout_height="match_parent" 
+           android:layout_weight="0.2"
+           android:orientation="vertical" 
+           android:id="@+id/event_sports_linearlayout">
+     		<TextView
+     		    android:id="@+id/textView1"
+     		    android:layout_width="match_parent"
+     		    android:layout_height="0dp"
+     		    android:layout_weight="1"
+     		    android:text="SPORTS"
+     		    android:textSize="12sp"
+     		    android:textColor="@color/event_sort_text_color"
+     		    android:gravity="center"
+     		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     		<ImageView
+     		    android:id="@+id/event_sport_imageView"
+     		    android:layout_width="match_parent"
+     		    android:layout_height="8dp"
+     		    android:background="@android:color/transparent" />
+   	    
+     	</LinearLayout>
+     	<View
+     		    android:id="@+id/view1"
+     		    android:layout_width="0.3dp"
+     		    android:background="@color/event_sort_divider_color"
+     		    android:layout_height="match_parent" 
+     		    android:layout_marginTop="6dp"
+     		    android:layout_marginBottom="12dp"/>
+     	<LinearLayout android:layout_width="0dp"
+           android:layout_height="match_parent" 
+           android:layout_weight="0.2"
+           android:orientation="vertical" 
+           android:id="@+id/event_concerts_linearlayout">
+     		<TextView
+     		    android:id="@+id/textView1"
+     		    android:layout_width="match_parent"
+     		    android:layout_height="0dp"
+     		    android:layout_weight="1"
+     		    android:textSize="12sp"
+     		    android:text="CONCERTS"
+     		    android:textColor="@color/event_sort_text_color"
+     		    android:gravity="center"
+     		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     		<ImageView
+     		    android:id="@+id/event_consert_imageView"
+     		    android:layout_width="match_parent"
+     		    android:layout_height="8dp"
+     		    android:background="@android:color/transparent" />
+   	    
+     	</LinearLayout>
+     	<View
+     		    android:id="@+id/view1"
+     		    android:layout_width="0.3dp"
+     		    android:background="@color/event_sort_divider_color"
+     		    android:layout_height="match_parent" 
+     		    android:layout_marginTop="6dp"
+     		    android:layout_marginBottom="12dp"/>
+     	<LinearLayout android:layout_width="0dp"
+           android:layout_height="match_parent" 
+           android:layout_weight="0.2"
+           android:orientation="vertical" 
+           android:id="@+id/event_theatre_linearlayout">
+     		<TextView
+     		    android:id="@+id/textView1"
+     		    android:layout_width="match_parent"
+     		    android:layout_height="0dp"
+     		    android:layout_weight="1"
+     		    android:textSize="12sp"
+     		    android:text="THEATRE"
+     		    android:textColor="@color/event_sort_text_color"
+     		    android:gravity="center"
+     		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+     		<ImageView
+     		    android:id="@+id/event_theatre_imageView"
+     		    android:layout_width="match_parent"
+       		    android:layout_height="8dp"
+     		    android:background="@android:color/transparent" />
+   	    
+     	</LinearLayout>
+
+    </LinearLayout> 
+     <LinearLayout
+            android:id="@+id/venu_not_found_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/sort_id_layout"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="No Events Found"
+            android:gravity="center"
+            android:textScaleX="1"
+            android:textSize="19sp"
+            android:textStyle="normal"/>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp" 
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/gray"/>
+
+    </LinearLayout>
+    <LinearLayout android:id="@+id/event_view_list_layout"
+		android:orientation="vertical"
+		android:layout_width="fill_parent" 
+		android:layout_height="match_parent"
+		android:baselineAligned="false"
+		android:layout_below="@+id/sort_id_layout"
+		android:background="@color/list_white">
+<!-- 		<ListView
+		    android:id="@+id/event_page_listView1"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"	    		 
+		    android:cacheColorHint="@android:color/transparent"
+		    android:divider="@android:color/transparent"
+		    android:fastScrollEnabled="true" 
+			android:fastScrollAlwaysVisible="true">
+		</ListView>	 -->	
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/pull_refresh_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:fastScrollAlwaysVisible="true"
+        android:fastScrollEnabled="true"
+        android:smoothScrollbar="true" />
+		
+	</LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout android:layout_width="match_parent"
+    	android:layout_height="63dp"
+    	android:orientation="horizontal" 
+    	android:layout_marginTop="5dp"
+    	android:layout_marginLeft="3dp"
+    	android:id="@+id/row_list_">
+   	
+       <RelativeLayout  android:layout_width="wrap_content"
+    		android:layout_height="match_parent"
+    		android:gravity="center">
+        
+        	<ImageView
+            	android:id="@+id/spacial_tickets_imageView1"
+            	android:layout_width="60dp"
+           	 	android:layout_height="match_parent" 
+           	 	android:layout_marginTop="6dp"
+           	 	android:visibility="gone"/>
+        	<LinearLayout android:layout_width="wrap_content"
+    			android:layout_height="match_parent"
+    			android:orientation="horizontal"
+    			android:id="@+id/normal_tickets_linearLayout">
+      			<com.dds.fye.tickets.customtextview.VerticalTextView 
+        			android:id="@+id/tickets_section_textview"
+        			android:layout_width="17dp"
+        			android:layout_height="match_parent"
+        			style="@style/verticalTextStyle"
+        			android:text="FRI"       			
+        			android:maxLength="3"
+        			android:layout_marginTop="2dp"
+        			android:textColor="@color/ticket_row_month_text_color"
+        			android:background="@drawable/section_flag_standard"
+        			android:gravity="bottom"/>
+    			<LinearLayout
+        			android:layout_width="45dp"
+        			android:layout_height="match_parent"
+        			android:orientation="vertical" 
+        			android:layout_marginLeft="3dp">
+
+        		<TextView
+            		android:id="@+id/row_textView1"
+            		android:layout_width="wrap_content"
+            		android:layout_height="wrap_content"
+            		android:text="ROW"
+            		android:textColor="@color/ticket_row_ROW_name_text_color"
+           			android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        		<TextView
+            		android:id="@+id/number_of_row_textView2"
+            		android:layout_width="match_parent"
+            		android:layout_height="match_parent"
+            		android:text="300"
+            		android:lines="1"
+            		android:gravity="bottom"
+            		android:textColor="@color/ticket_row_ROW_value_text_color"
+            		android:ellipsize="end"
+            		android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    			</LinearLayout>
+    		</LinearLayout>
+       </RelativeLayout>
+       <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/ticket_title_textView1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:text="Large Text"
+            android:singleLine="true"
+            android:lines="1"
+            android:textColor="@color/ticket_row_section_text_color"
+            android:ellipsize="end"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+  		<TextView
+            android:id="@+id/nos_ticket_textView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:gravity="bottom"
+            android:text="1 tickets"
+            android:paddingBottom="3dp"
+            android:textColor="@color/ticket_row_noOfTicket_text_color"
+            android:textSize="14sp" />
+
+          <LinearLayout android:id="@+id/delivery_method_linearlayout"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="0.1"
+              android:gravity="left"
+              android:orientation="horizontal" 
+              android:visibility="gone">
+			  <ImageView
+                  android:id="@+id/second_list_row_imageView_test_test_"
+                  android:layout_width="35dp"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/package_icon" 
+                  android:visibility="visible"/>
+              <ImageView
+                  android:id="@+id/second_list_row_imageView2"
+                  android:layout_width="35dp"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/hotel_icon" 
+                  android:visibility="invisible"/>
+
+              <ImageView
+                  android:id="@+id/second_list__row_imageView3"
+                  android:layout_width="35dp"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/e_ticket_icon"
+                  android:visibility="invisible"/>
+
+              <ImageView
+                  android:id="@+id/second_list_row_imageView4"
+                  android:layout_width="35dp"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/instant_ticket_icon"
+                  android:visibility="invisible"/>
+
+              <ImageView
+                  android:id="@+id/second_list_row_imageView5"
+                  android:layout_width="35dp"
+                  android:layout_height="wrap_content"
+                  android:src="@drawable/parking_pass_included_icon"
+                  android:visibility="invisible"/>
+
+          </LinearLayout>
+   
+      </LinearLayout>
+      <View
+    	    android:id="@+id/view1"
+    	    android:layout_width="0.2dp"
+    	    android:background="@color/ticket_row_divider_color"
+    	    android:layout_marginTop="5dp"
+    	    android:layout_marginBottom="5dp"
+    	    android:layout_height="match_parent" />
+      <LinearLayout android:layout_width="0dp"
+          android:layout_height="60dp"
+          android:orientation="vertical"
+          android:gravity="center"
+          android:paddingLeft="3dp"
+          android:layout_marginRight="10dp"
+          android:layout_weight="0.1">
+
+          <TextView
+              android:id="@+id/textView1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/ticket_row_price_color"
+              android:text="Price" 
+              android:textSize="18sp"/>
+
+          <TextView
+              android:id="@+id/total_price_textView2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/ticket_row_price_value_color"
+              android:text="$3000" 
+              android:textSize="16sp"/>
+          
+      </LinearLayout>
+
+    </LinearLayout>
+      <View
+    	    android:id="@+id/view1"
+    	    android:layout_width="match_parent"
+    	    android:background="@android:color/darker_gray"
+    	    android:layout_marginRight="20dp"
+    	    android:layout_marginTop="5dp"
+    	    android:layout_height="0.5dp" />
+
+</LinearLayout>

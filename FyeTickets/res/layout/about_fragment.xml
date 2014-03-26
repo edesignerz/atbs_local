@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/about_us_bottom_bg">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/terms_and_conditions_button1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp" >
+
+        <WebView
+        android:id="@+id/about_webView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    </FrameLayout>
+    <TextView
+        android:id="@+id/app_version_textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:text="" 
+        android:textColor="@color/about_text_color"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+        android:id="@+id/copyright_fye_tickets_textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/app_version_textView2"
+        android:layout_centerHorizontal="true"
+        android:text="@string/copyright_fye_tickets_"
+        android:textColor="@color/about_copyright_color"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/terms_and_conditions_button1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_above="@+id/go_fye_tickets_web_site_button2"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/about_text_color"
+        android:layout_marginBottom="18dp"
+        android:text="Terms and Conditions" 
+        android:background="@drawable/about_us_page_button"/>
+
+    <Button
+        android:id="@+id/go_fye_tickets_web_site_button2"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginRight="20dp"
+        android:layout_above="@+id/contact_us_button3"
+        android:layout_alignLeft="@+id/terms_and_conditions_button1"
+        android:layout_marginBottom="18dp"
+        android:text="FYETickets.com Website" 
+        android:textColor="@color/about_text_color"
+        android:background="@drawable/about_us_page_button"/>
+
+    <Button
+        android:id="@+id/contact_us_button3"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginRight="20dp"
+        android:layout_above="@+id/copyright_fye_tickets_textView1"
+        android:layout_alignLeft="@+id/go_fye_tickets_web_site_button2"
+        android:layout_marginBottom="18dp"
+        android:text="Contact Us" 
+        android:textColor="@color/about_text_color"
+        android:background="@drawable/about_us_page_button"/>
+
+</RelativeLayout>

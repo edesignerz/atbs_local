@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" 
+    android:padding="10dp"
+    android:gravity="center_vertical"
+    android:background="@color/location_search_row_background_color"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/location_icon_imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView  android:id="@+id/location_textView"
+    	android:layout_width="fill_parent"
+    	android:layout_height="40dp"
+    	android:padding="10dp"
+    	android:textSize="16sp"
+    	android:text="hjdsfgshj"
+    	android:textColor="@color/location_search_row_text_color">
+  	</TextView>
+  	
+</LinearLayout>

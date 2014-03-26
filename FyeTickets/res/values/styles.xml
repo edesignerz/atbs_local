@@ -1,0 +1,75 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="@android:style/Theme.Holo.Light.NoActionBar">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+            parent="@android:style/Theme.Holo.Light.NoActionBar"
+        -->
+       
+    </style>
+
+    
+	 <!-- Application theme. -->
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light.NoActionBar">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    	 <item name="android:spinnerDropDownItemStyle">@style/MySpinnerDropDownItem</item> 	
+    	<item name="android:buttonStyleToggle">@style/Widget.Button.Toggle</item>
+    </style>
+
+<!-- <style name="MyDropDownListView" parent="android:style/Widget.Holo.ListView.DropDown">
+    <item name="android:listSelector">@drawable/ad_selectable_background</item>
+  </style> -->
+  <style name="MySpinnerDropDownItem" parent="android:style/Widget.Holo.ListView.DropDown">
+    <item name="android:textColor">#848484</item> 
+    <item name="android:gravity">center</item>
+  </style>
+  
+  <!-- dialog animation -->
+  <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+		</style>
+	<!-- Animation for dialog box -->
+    <style name="DialogSlideAnim" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+    </style>
+      <!-- dialog animation -->
+  <style name="DialogAnimation_up_down">
+        <item name="android:windowEnterAnimation">@anim/slide_top_to_down</item>
+        <item name="android:windowExitAnimation">@anim/slide_down_to_top</item>
+		</style>
+	<!-- Animation for dialog box -->
+    <style name="DialogSlideAnimUpDown" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation_up_down</item>
+    </style>
+    <!-- Virtical text view stayle -->
+       <style name="verticalTextStyle"
+        parent="android:Widget.TextView">
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingBottom">0dp</item>       
+        <item name="android:gravity">bottom</item>
+        <item name="android:textScaleX">1.0</item>       
+        <item name="android:textSize">13sp</item>
+    </style>
+    
+       
+           <!-- Overwrite the ToggleButton style -->
+ <style name="Widget.Button.Toggle" parent="android:Widget">
+    <item name="android:background">@drawable/btn_toggle_bg</item>
+    <item name="android:textOn"></item><!-- Add -->
+    <item name="android:textOff"></item><!-- Del -->
+    <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
+</style>
+ 
+<!--<style name="OurThemeName"  parent="@android:Theme.Black">
+    <item name="android:buttonStyleToggle">@style/Widget.Button.Toggle</item>
+    <item name="android:textOn"></item>
+    <item name="android:textOff"></item>
+</style> -->
+</resources>

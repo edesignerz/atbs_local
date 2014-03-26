@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    	
+    
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <!--Facebook app id -->
+    <string name="facebook_appid">221343378057881</string>
+    <!-- Facebook end -->
+    <!--Twitter app id -->
+    <string name="twitter_appkey">qFj9SLIX7Iqm8b4SOuwPA</string>
+    <string name="twitter_api_secret">OAZBhXal5bIJAKdGMrTJnVeqLdXSdvNsNX6VUae0H0I</string>
+    <string name="twitter_appAuthentication">https://api.twitter.com/oauth2/token</string>  
+    <string name="twitter_appRequestTokenURL">https://api.twitter.com/oauth/request_token</string>
+    <string name="twitter_appAuthorizeURL">https://api.twitter.com/oauth/authorize</string>   
+    <string name="twitter_appAuthAccessTokenURL">https://api.twitter.com/oauth/access_token</string>
+    
+    <string name="twitter_Accesstoken">1329973266-1iDoAP3w2NRKgrF7CPFAlBuTo39x0XK9YST4xxo</string>   
+    <string name="twitter_Accesstokensecret">1JRkllkmeEeULIml1LwUFjUUcZqdTSrXERyym8jEyc4jg</string>
+    <!-- Twitter end -->
+    <string name="request">Request</string>
+    <string name="instructions">Login to create a link to fetch account data</string>
+    <string name="logout">Log out</string>
+    <string name="login_failed_dialog_title">Login failed</string>
+    <string name="ok_button">OK</string>
+    
+    <string name="cancelled">Cancelled</string>
+    <string name="permission_not_granted">Unable to perform selected action because permissions were not granted.</string>
+    <string name="ok">OK</string>
+    <string name="hello_user">Hello %1$s!</string>
+    <string name="success">Success</string>
+    <string name="failed">Failed</string>
+    <string name="network_issue">Please connect to working Internet connection.</string>
+    <string name="successfully_posted_post">Successfully posted \'%1$s\'.\nPost ID: %2$s</string>
+    <string name="error">Error</string>
+    <string name="status_update">Updating status for %1$s at %2$s</string>
+    <string name="photo_post">Photo Post</string>
+    <string name="you_picked">You picked:</string>
+    <string name="no_friends_selected">&lt;No friends selected&gt;</string>
+    <string name="no_place_selected">&lt;No place selected&gt;</string>
+    <string name="pick_seattle_place">Pick a Seattle Place</string>
+    <string name="exception">Exception: %1$s</string>
+    
+    <!--  -->
+      <string-array name="planets_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <!-- Days -->
+     <string-array name="days_array">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+    <string name="MON">Monday</string>
+    <string name="TUE">Tuesday</string>
+    <string name="WED">Wednesday</string>
+    <string name="THU">Thursday</string>
+    <string name="FRI">Friday</string>
+    <string name="SAT">Saturday</string>
+    <string name="SUN">Sunday</string>
+    <!-- Months -->
+    <string-array name="months_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <string name="JAN">January</string>
+    <string name="FEB">February</string>
+    <string name="MAR">March</string>
+    <string name="APR">April</string>
+    <string name="MAY">May</string>
+    <string name="JUN">June</string>
+    <string name="JUL">July</string>
+    <string name="AUG">August</string>
+    <string name="SEP">September</string>
+    <string name="OCT">October</string>
+    <string name="NOV">November</string>
+    <string name="DEC">December</string>
+</resources>

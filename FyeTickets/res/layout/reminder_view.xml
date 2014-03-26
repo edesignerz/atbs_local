@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/reminder_background_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/action_bar"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/reminder_done_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/reminder_done_button_text_color"
+            android:text="Done" />
+
+        <LinearLayout
+            android:id="@+id/back_linearlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/reminder_title_textView1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/reminder_title_textView1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_button" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/action_bar_logo" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/reminder_title_textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/reminder_done_button1"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/reminder_done_button1"
+            android:layout_toRightOf="@+id/back_linearlayout"
+            android:gravity="center"
+            android:text="Reminder"
+            android:textColor="@color/reminder_title_text_color"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
+ 	<ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/about_us_bottom_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"                
+        	 	android:layout_marginLeft="5dp"
+        	 	android:layout_marginRight="5dp">
+            <LinearLayout
+       		 	android:layout_width="match_parent"
+       		 	android:layout_height="wrap_content"
+        	 	android:orientation="vertical"   
+        	 	android:layout_marginTop="20dp"    	 
+            	android:background="@color/reminder_address_field_color" >
+
+        	<EditText
+            	android:id="@+id/reminder_editText1"
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:ems="10"
+           		android:hint=""
+            	android:textColor="@color/reminder_address_text_color"
+            	android:inputType="textMultiLine" >
+
+            	<requestFocus />
+        	</EditText>
+   			</LinearLayout>
+        <LinearLayout
+            android:id="@+id/choose_date_time_linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/reminder_date_field_color"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="Remind me..."
+                android:textColor="@color/reminder_date_text_color"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <TextView
+                android:id="@+id/selected_date_textView1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:layout_marginLeft="5dp"
+                android:text="Mar 08 09:00 PM"
+                android:textColor="@color/reminder_date_text_color"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/radius_select_date_imageView1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:src="@drawable/right_arrow_0" />
+        </LinearLayout>
+      </LinearLayout>
+  </ScrollView>
+    
+
+</LinearLayout>
